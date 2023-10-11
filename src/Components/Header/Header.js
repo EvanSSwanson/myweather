@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="Header">
         <div className='header-left'>
-            <h1 className='title'>Tempestas<span className="title-sub">Mea</span></h1>
+            <h1 className='title'>Temp<span className="title-sub">es</span>t</h1>
             <button className='fahrenheit-button'>°F</button>
             <button className='celcius-button'>°C</button>
         </div>

@@ -7,7 +7,7 @@
     cursor: default;
     width: 100vw;
     margin-top: -1.5vw;
-    margin-left: 2.75vw;
+    margin-left: 4vw;
     margin-right: 2vw;
 }
 
@@ -43,14 +43,14 @@
     }
 
     .fahrenheit-button, .celcius-button {
-        font-size: 1.25vw;
-        height: 1vw;
-        width: 1vw;
+        font-size: 1.75vw;
+        height: 1.25vw;
+        width: 1.25vw;
     }
 
     .fahrenheit-button {
-        margin-left: 3.5vw;
-        margin-right: 2vw;
+        margin-left: 6vw;
+        margin-right: 3vw;
     }
   }
   
@@ -61,18 +61,18 @@
     }
 
     .github-image {
-        height: 4.66vw;
-        width: 4.66vw;
+        height: 6vw;
+        width: 6vw;
     }
 
     .fahrenheit-button, .celcius-button {
-        font-size: 2.5vw;
-        height: 2vw;
-        width: 2vw;
+        font-size: 4vw;
+        height: 3vw;
+        width: 3vw;
     }
 
     .fahrenheit-button {
-        margin-left: 6vw;
+        margin-left: 7vw;
         margin-right: 5vw;
     }
   }
