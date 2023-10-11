@@ -11,9 +11,11 @@ const Header = () => {
             <button className='fahrenheit-button'>°F</button>
             <button className='celcius-button'>°C</button>
         </div>
-        <a target='_blank' rel='noopener noreferrer' href="https://github.com/EvanSSwanson/myweather">
-            <img src={githubImage} className= 'github-image'/>
-        </a>
+        <div className='header-right'>
+          <a className= 'github-link' target='_blank' rel='noopener noreferrer' href="https://github.com/EvanSSwanson/myweather">
+              <img src={githubImage} className= 'github-image'/>
+          </a>
+        </div>
     </div>
   )
 }
