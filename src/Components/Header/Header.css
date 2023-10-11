@@ -1,0 +1,32 @@
+.Header {
+    display: flex;
+    align-items: center;
+    font-family: 'Young Serif';
+    color: #efeade;
+    /* background-color: blanchedalmond; */
+    cursor: default;
+    width: 100vw;
+}
+
+.title {
+    margin-top: -.25vw;
+    margin-left: 2.75vw;
+}
+
+.title-sub {
+    color: #a52a2a;
+}
+
+@media screen and (min-width: 55.1em) {
+    .Header {
+        font-size: 2vw;
+        height: 10vw;
+    }
+  }
+  
+  @media screen and (max-width: 55em) {
+    .Header {
+        font-size: 4vw;
+        height: 20vw;
+    }
+  }
