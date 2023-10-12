@@ -1,6 +1,32 @@
-.card {
+.Card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
     background-color: #3b3e47;
     border-radius: 2vw;
     height: 30vw;
     width: 100vw;
+    font-family: 'Autour One';
+    font-size: 1.5vw;
+}
+
+.panel-one {
+    display: flex;
+    align-items: center;
+    background-color: #323644;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+    height: 6vw;
+}
+
+.city-name {
+    margin-left: 5vw;
+    font-family: 'Young Serif';
+    font-size: 3vw;
+}
+
+.region-name {
+    margin-left: 4vw;
+    margin-top: 2.1vw;
+    font-family: 'Young Serif';
 }
