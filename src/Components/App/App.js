@@ -6,6 +6,7 @@ import Body from '../Body/Body'
 import example from '../../startingData'
 
 const App = () => {
+  
   return (
     <div className="App">
       <Header/>
