@@ -8,6 +8,7 @@ const cities = [
     'Liverpool',
     'Buenos%20Aires',
     'Tokyo',
+    'Melbourne,AU'
 ]
 
 export default cities
