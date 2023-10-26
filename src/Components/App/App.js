@@ -6,11 +6,13 @@ import Body from '../Body/Body'
 import example from '../../resources/startingData'
 
 const App = () => {
+
+  const [units, setUnits] = useState('imperial')
   
   return (
     <div className="App">
-      <Header/>
-      <Body/>
+      <Header setUnits={setUnits}/>
+      <Body units={units}/>
     </div>
   )
 }

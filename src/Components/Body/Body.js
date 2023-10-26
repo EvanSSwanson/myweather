@@ -2,52 +2,38 @@ import './Body.css'
 import React, { useState, useEffect } from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
 import Card from '../Card/Card'
-import example from '../../resources/startingData'
 import cities from '../../resources/cities'
 
-const Body = () => {
+const Body = ({units}) => {
 
-    const [info, setInfo] = useState([
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-        {'weather': example[0], 'forecast': undefined},
-    ])
+    const [info, setInfo] = useState(cities[1])
 
-    const getData = (city, keyword, i) => {
-        fetch(`https://api.openweathermap.org/data/2.5/${keyword}?q=${city}&appid=574c152960d1d19cafbfb4462369cf51&units=imperial`)
+    const getData = (city, keyword, i, measures) => {
+        fetch(`https://api.openweathermap.org/data/2.5/${keyword}?q=${city}&appid=574c152960d1d19cafbfb4462369cf51&units=${measures}`)
             .then(response => {
                 return response.json()
             })
-            // .then(data => setInfo(info => [...info, data])
             .then(data => {
-                // data.checker = i
-                setInfo([...info, info[i].weather = data])
+                setInfo([...info, info[i][keyword] = data])
             })
             .catch(error => {
                 console.log(error)
-      })
+        })
       }
 
       useEffect(() => {
-        for (let i = 0; i < cities.length; i++) {
-                getData(cities[i], 'weather', i)
-            // else {
-            //     setTimeout(() => {
-            //         setInfo(info.sort((a, b) => a.checker - b.checker))
-            //         console.log(info)
-            //       }, "1000")
-            // }
+        for (let i = 0; i < cities[0].length; i++) {
+                getData(cities[0][i], 'weather', i, 'imperial')
+                getData(cities[0][i], 'forecast', i, 'imperial')
         }
-        // cities.forEach(city => getData(city, 'weather'))
-        // cities.forEach(city => getData(city, 'forecast'))
       }, []);
+
+      useEffect(() => {
+        for (let i = 0; i < cities[0].length; i++) {
+            getData(cities[0][i], 'weather', i, units)
+            getData(cities[0][i], 'forecast', i, units)
+    }
+      }, [units])
 
       useEffect(() => {
         console.log(info)
@@ -57,13 +43,17 @@ const Body = () => {
   return (
     
     <div className='Body'>
-        {info.filter(obj => obj.weather.base === 'stations').map((datum) => {
+        <div>
+
+        </div>
+        {info.filter(obj => obj.pos < 10).map((datum) => {
             return (
                 <Card 
                 city={datum.weather.name}
                 region={datum.weather.sys.country}
                 temperature={datum.weather.main.temp}
                 pressure={datum.weather.main.pressure}
+                future={datum.forecast.list[0].main.humidity}
                 />
             );
         })}
