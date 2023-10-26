@@ -8,7 +8,6 @@ const Body = ({units}) => {
 
     const [info, setInfo] = useState(cities[1])
     const [marker, setMarker] = useState(' °F')
-
     const getData = (city, keyword, i, measures) => {
         fetch(`https://api.openweathermap.org/data/2.5/${keyword}?q=${city}&appid=574c152960d1d19cafbfb4462369cf51&units=${measures}`)
             .then(response => {
