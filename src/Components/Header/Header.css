@@ -23,7 +23,7 @@
     color: #a52a2a;
 }
 
-.fahrenheit-button, .celcius-button {
+#fahrenheit-button, #celcius-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,13 +69,13 @@
         width: 2.33vw;
     }
 
-    .fahrenheit-button, .celcius-button {
+    #fahrenheit-button, #celcius-button {
         font-size: 1.75vw;
         height: 1.25vw;
         width: 1.25vw;
     }
 
-    .fahrenheit-button {
+    #fahrenheit-button {
         margin-left: 5vw;
         margin-right: 3vw;
     }
@@ -104,13 +104,13 @@
         width: 6vw;
     }
 
-    .fahrenheit-button, .celcius-button {
+    #fahrenheit-button, #celcius-button {
         font-size: 4vw;
         height: 3vw;
         width: 3vw;
     }
 
-    .fahrenheit-button {
+    #fahrenheit-button {
         margin-left: 7vw;
         margin-right: 5vw;
     }
