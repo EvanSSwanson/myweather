@@ -4,9 +4,10 @@
     margin-bottom: 3vw;
     background-color: #3b3e47;
     border-radius: 2vw;
-    height: 30vw;
-    width: 100vw;
+    height: 40vw;
+    width: 95vw;
     font-family: 'Autour One';
+    color: #efeade;
     font-size: 1.5vw;
 }
 
@@ -16,13 +17,13 @@
     background-color: #323644;
     border-top-left-radius: 2vw;
     border-top-right-radius: 2vw;
-    height: 6vw;
+    height: 10vw;
 }
 
 .city-name {
-    margin-left: 5vw;
+    margin-left: 2vw;
     font-family: 'Young Serif';
-    font-size: 3vw;
+    font-size: 5vw;
 }
 
 .region-name {
