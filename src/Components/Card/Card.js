@@ -1,6 +1,6 @@
 import './Card.css';
 
-const Card = ({city, region, temperature, pressure, future}) => {
+const Card = ({city, region, temperature, pressure, future, time, dewpoint}) => {
   return (
     <div className='Card' id={city}> 
         <div className='panel-one'>
@@ -10,6 +10,8 @@ const Card = ({city, region, temperature, pressure, future}) => {
           <p>{temperature}</p>
           <p>{pressure}</p>
           <p>{future}</p>
+          <p>{time}</p>
+          <p>{dewpoint}</p>
     </div>
   )
 }

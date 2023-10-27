@@ -29,7 +29,7 @@ const example = [
         clouds: {
         all: ''
         },
-        dt: '',
+        dt: 5,
         sys: {
         type: '',
         id: '',

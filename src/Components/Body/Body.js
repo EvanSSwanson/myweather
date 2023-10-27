@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
 import Card from '../Card/Card'
 import cities from '../../resources/cities'
+import { giveDate, giveDewPoint } from '../../resources/funcs'
 
 const Body = ({units}) => {
 
@@ -33,6 +34,7 @@ const Body = ({units}) => {
       useEffect(() => {
         console.log(info)
         console.log('hi')
+        console.log(info[0].weather[units].dt)
       }, [info]);
 
       useEffect(() => {
@@ -54,9 +56,11 @@ const Body = ({units}) => {
                 <Card 
                 city={datum.weather[units].name}
                 region={datum.weather[units].sys.country}
-                temperature={Math.round(datum.weather[units].main.temp)  + marker}
+                temperature={Math.round(datum.weather[units].main.temp) + marker}
                 pressure={datum.weather[units].main.pressure}
                 future={datum.forecast[units].list[0].main.humidity}
+                time={giveDate(datum.weather[units].dt, datum.weather[units].timezone)}
+                dewpoint={giveDewPoint(datum.weather[units].main.temp, datum.weather[units].main.humidity, units) + marker}
                 />
             );
         })}
