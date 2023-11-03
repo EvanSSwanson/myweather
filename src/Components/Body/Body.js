@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
 import Card from '../Card/Card'
 import cities from '../../resources/cities'
-import { giveDate, giveDewPoint } from '../../resources/funcs'
+import { giveDate, giveDewPoint, giveDirection } from '../../resources/funcs'
 
 const Body = ({units}) => {
 
     const [info, setInfo] = useState(cities[1])
     const [marker, setMarker] = useState(' °F')
+    const [speed, setSpeed] = useState(' mph')
     const getData = (city, keyword, i, measures) => {
         fetch(`https://api.openweathermap.org/data/2.5/${keyword}?q=${city}&appid=574c152960d1d19cafbfb4462369cf51&units=${measures}`)
             .then(response => {
@@ -40,8 +41,10 @@ const Body = ({units}) => {
       useEffect(() => {
         if (units === 'imperial') {
             setMarker(' °F')
+            setSpeed(' mph')
         } else if (units === 'metric') {
             setMarker(' °C')
+            setSpeed(' kph')
         }
       }, [units]);
 
@@ -57,10 +60,17 @@ const Body = ({units}) => {
                 city={datum.weather[units].name}
                 region={datum.weather[units].sys.country}
                 temperature={Math.round(datum.weather[units].main.temp) + marker}
+                feelslike={Math.round(datum.weather[units].main.feels_like) + marker}
+                description={datum.weather[units].weather[0].description}
                 pressure={datum.weather[units].main.pressure}
-                future={datum.forecast[units].list[0].main.humidity}
                 time={giveDate(datum.weather[units].dt, datum.weather[units].timezone)}
                 dewpoint={giveDewPoint(datum.weather[units].main.temp, datum.weather[units].main.humidity, units) + marker}
+                humidity={datum.weather[units].main.humidity + '%'}
+                direction={giveDirection(datum.weather[units].wind.deg)}
+                windspeed={Math.round(datum.weather[units].wind.speed) + speed}
+                windgust={Math.round(datum.weather[units].wind.gust) + speed}
+                icon={`https://openweathermap.org/img/wn/${datum.weather[units].weather[0].icon}@2x.png`}
+                // future={datum.forecast[units].list[0].main.humidity}
                 />
             );
         })}

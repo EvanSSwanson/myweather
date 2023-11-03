@@ -2,6 +2,9 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
+    position: fixed;
+    top: .001vw;
+    background-color: #202227;
     font-family: 'Young Serif';
     color: #efeade;
     cursor: default;
