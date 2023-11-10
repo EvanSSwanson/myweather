@@ -62,13 +62,12 @@ const Body = ({units}) => {
                 temperature={Math.round(datum.weather[units].main.temp) + marker}
                 feelslike={Math.round(datum.weather[units].main.feels_like) + marker}
                 description={datum.weather[units].weather[0].description}
-                pressure={datum.weather[units].main.pressure}
+                pressure={datum.weather[units].main.pressure + ' mb'}
                 time={giveDate(datum.weather[units].dt, datum.weather[units].timezone)}
                 dewpoint={giveDewPoint(datum.weather[units].main.temp, datum.weather[units].main.humidity, units) + marker}
                 humidity={datum.weather[units].main.humidity + '%'}
                 direction={giveDirection(datum.weather[units].wind.deg)}
                 windspeed={Math.round(datum.weather[units].wind.speed) + speed}
-                windgust={Math.round(datum.weather[units].wind.gust) + speed}
                 icon={`https://openweathermap.org/img/wn/${datum.weather[units].weather[0].icon}@2x.png`}
                 // future={datum.forecast[units].list[0].main.humidity}
                 />

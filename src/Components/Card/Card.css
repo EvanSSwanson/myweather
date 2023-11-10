@@ -12,8 +12,8 @@
 }
 
 .Card p {
-    font-size: 2.5vw;
-    margin: .8vw;
+    font-size: 2.7vw;
+    margin: 1vw;
 }
 
 .panel-top {
@@ -52,11 +52,17 @@
 }
 
 .panel-left, .panel-center {
-    width: 28%;
+    width: 24%;
+}
+
+.panel-center {
+    width: 34%
 }
 
 .panel-right {
-    width: 44%;
+    display: flex;
+    justify-content: center;
+    width: 42%;
     padding-top: .8vw;
 }
 
@@ -64,7 +70,7 @@
     height: 24vw;
     width: 24vw;
     margin-top: -4vw;
-    margin-bottom: -2vw;
+    margin-bottom: -3.5vw;
 }
 
 .description, .feelslike {
@@ -72,13 +78,9 @@
 }
 
 .temperature {
-    font-size: 8vw;
+    font-size: 9vw;
     margin-top: 3vw;
-    margin-bottom: 5vw;
-}
-
-.direction {
-    padding-top: 1.5vw;
+    margin-bottom: 3.5vw;
 }
 
 .panel-bottom {

@@ -24,7 +24,8 @@ const example = [
         visibility: '',
         wind: {
         speed: '',
-        deg: ''
+        deg: '',
+        gust: '?'
         },
         clouds: {
         all: ''

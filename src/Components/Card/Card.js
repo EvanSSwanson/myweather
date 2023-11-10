@@ -2,7 +2,7 @@ import './Card.css';
 import React from 'react'
 import { useCollapse } from 'react-collapsed';
 
-const Card = ({city, region, temperature, feelslike, description, pressure, time, dewpoint, humidity, direction, windspeed, windgust, icon}) => {
+const Card = ({city, region, temperature, feelslike, description, pressure, time, dewpoint, humidity, direction, windspeed, icon}) => {
 
   function Collapsible() {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
@@ -40,9 +40,8 @@ return (
           <div className='panel-right'>
             <p className='dew-point'>dew point: {dewpoint}</p>
             <p className='humidity'>humidity: {humidity}</p>
-            <p className='direction'>wind: {direction}</p>
-            <p className='windspeed'>speed: {windspeed}</p>
-            <p className='gust'>gust: {windgust}</p>
+            <p className='pressure'>pressure: {pressure}</p>
+            <p className='wind'>wind: {windspeed} {direction}</p>
           </div>
         </div>
         <div className='panel-bottom'>
