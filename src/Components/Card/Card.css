@@ -11,6 +11,11 @@
     font-size: 1.5vw;
 }
 
+.Card p {
+    font-size: 2.5vw;
+    margin: .8vw;
+}
+
 .panel-top {
     display: flex;
     align-items: center;
@@ -36,14 +41,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 24vw;
 }
 
 .panel-left, .panel-center, .panel-right {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 33.3%;
     height: 100%
+}
+
+.panel-left, .panel-center {
+    width: 28%;
+}
+
+.panel-right {
+    width: 44%;
+    padding-top: .8vw;
 }
 
 .icon {
@@ -53,28 +67,39 @@
     margin-bottom: -2vw;
 }
 
+.description, .feelslike {
+    font-size: 3vw;
+}
+
 .temperature {
-    font-size: 7vw;
-    margin-top: 5vw;
-    margin-bottom: 4.25vw;
-}
-
-.dew-point, .direction, .windspeed {
-    margin-bottom: .05vw;
-}
-
-.humidity {
-    margin-bottom: 3vw;
-}
-
-.dew-point {
+    font-size: 8vw;
     margin-top: 3vw;
+    margin-bottom: 5vw;
+}
+
+.direction {
+    padding-top: 1.5vw;
 }
 
 .panel-bottom {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+}
+
+.collapsible {
+    z-index: top;
+    position:relative;
+}
+
+.collapsible .collapse-content {
+    padding: 6px;
+    background-color: #eeeeee;
+}
+.collapsible .collapse-header {
+    background-color: #dddddd;
+    padding: 6px;
+    cursor: pointer;
 }
 
 /* #forecast-button {
