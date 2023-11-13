@@ -2,6 +2,8 @@ import './Card.css';
 import React from 'react'
 import { useCollapse } from 'react-collapsed';
 import { giveDate, giveDewPoint, giveDirection } from '../../resources/funcs'
+import downArrow from '../../resources/arrow_down.png'
+import upArrow from '../../resources/arrow_up.png'
 
 const Card = ({current, forecast, units, marker, speed}) => {
 
@@ -10,7 +12,7 @@ const Card = ({current, forecast, units, marker, speed}) => {
 return (
     <div className="collapsible">
         <div className='collapse-header' {...getToggleProps()}>
-            {isExpanded ? 'Collapse' : 'Expand'}
+            {isExpanded ? <p className='header-hide'><img src={upArrow} className= 'up-arrow'/>hide</p> : <p className='header-forecast'><img src={downArrow} className= 'down-arrow'/>forecast</p>}
         </div>
         <div {...getCollapseProps()}>
             <div className="collapse-content">
@@ -46,7 +48,6 @@ return (
           </div>
         </div>
         <div className='panel-bottom'>
-          {/* <button className='button' id='forecast-button'>forecast</button> */}
           <Collapsible/>
         </div>
     </div>

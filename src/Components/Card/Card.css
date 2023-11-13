@@ -51,25 +51,25 @@
     height: 100%
 }
 
-.panel-left, .panel-center {
-    width: 24%;
+.panel-left {
+    width: 26%;
 }
 
 .panel-center {
-    width: 34%
+    width: 32%
 }
 
 .panel-right {
     display: flex;
     justify-content: center;
     width: 42%;
-    padding-top: .8vw;
+    margin-top: -1.5vw;
 }
 
 .icon {
     height: 24vw;
     width: 24vw;
-    margin-top: -4vw;
+    margin-top: -2.8vw;
     margin-bottom: -3.5vw;
 }
 
@@ -84,26 +84,53 @@
 }
 
 .panel-bottom {
-    display: flex;
-    justify-content: flex-end;
+    height: 4vw;
     width: 100%;
 }
 
 .collapsible {
-    z-index: top;
-    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
 }
 
 .collapsible .collapse-content {
-    padding: 6px;
-    background-color: #eeeeee;
+    background-color: #33363e;
+    width: 95vw;
+    height: 106vw;
+    border-style: solid;
+    border-radius: 2vw;
+    border-width: .25vw;
+    border-color: #ec6e4c;
+    z-index: top;
+    position:relative;
 }
 .collapsible .collapse-header {
-    background-color: #dddddd;
-    padding: 6px;
+    background-color: #272a36;
     cursor: pointer;
+    margin-top: -1.5vw;
+    height: 5.5vw;
+    width: 20%;
+    border-top-left-radius: .25vw;
+    border-bottom-right-radius: 2vw;
 }
 
-/* #forecast-button {
-    
-} */
+.collapsible .collapse-header .header-forecast, .collapsible .collapse-header .header-hide {
+    display: flex;
+    font-size: 2.3vw;
+    margin-top:1.5vw;
+    margin-left: .75vw;
+}
+
+.down-arrow, .up-arrow {
+    height: 3vw;
+    width: 3vw;
+    margin-right: 1vw;
+}
+
+.up-arrow {
+    margin-right: 3.45vw;
+}
