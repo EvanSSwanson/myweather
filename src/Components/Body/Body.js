@@ -40,10 +40,10 @@ const Body = ({units}) => {
 
       useEffect(() => {
         if (units === 'imperial') {
-            setMarker(' °F')
+            setMarker('°F')
             setSpeed(' mph')
         } else if (units === 'metric') {
-            setMarker(' °C')
+            setMarker('°C')
             setSpeed(' kph')
         }
       }, [units]);
@@ -57,18 +57,11 @@ const Body = ({units}) => {
         {info.filter(obj => obj.pos < 10).map((datum) => {
             return (
                 <Card 
-                city={datum.weather[units].name}
-                region={datum.weather[units].sys.country}
-                temperature={Math.round(datum.weather[units].main.temp) + marker}
-                feelslike={Math.round(datum.weather[units].main.feels_like) + marker}
-                description={datum.weather[units].weather[0].description}
-                pressure={datum.weather[units].main.pressure + ' mb'}
-                time={giveDate(datum.weather[units].dt, datum.weather[units].timezone)}
-                dewpoint={giveDewPoint(datum.weather[units].main.temp, datum.weather[units].main.humidity, units) + marker}
-                humidity={datum.weather[units].main.humidity + '%'}
-                direction={giveDirection(datum.weather[units].wind.deg)}
-                windspeed={Math.round(datum.weather[units].wind.speed) + speed}
-                icon={`https://openweathermap.org/img/wn/${datum.weather[units].weather[0].icon}@2x.png`}
+                current={datum.weather[units]}
+                forecast={datum.forecast[units]}
+                units={units}
+                marker={marker}
+                speed={speed}
                 // future={datum.forecast[units].list[0].main.humidity}
                 />
             );

@@ -1,8 +1,9 @@
 import './Card.css';
 import React from 'react'
 import { useCollapse } from 'react-collapsed';
+import { giveDate, giveDewPoint, giveDirection } from '../../resources/funcs'
 
-const Card = ({city, region, temperature, feelslike, description, pressure, time, dewpoint, humidity, direction, windspeed, icon}) => {
+const Card = ({current, forecast, units, marker, speed}) => {
 
   function Collapsible() {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
@@ -22,26 +23,26 @@ return (
 }
 
   return (
-    <div className='Card' id={city}> 
+    <div className='Card' id={current.name}> 
         <div className='panel-top'>
-            <h3 className='city-name'>{city}</h3>
-          <p className='region-name'>{region}</p>
-          <p>{time}</p>
+            <h3 className='city-name'>{current.name}</h3>
+          <p className='region-name'>{current.sys.country}</p>
+          <p>{giveDate(current.dt, current.timezone)}</p>
         </div>
         <div className='main-panel-container'>
           <div className='panel-left'>
-            <img className='icon' src={icon} />
-            <h2 className='description'>{description}</h2>
+            <img className='icon' src={`https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`} />
+            <h2 className='description'>{current.weather[0].description}</h2>
           </div>
           <div className='panel-center'>
-            <h1 className='temperature'>{temperature}</h1>
-            <h2 className='feelslike'>feels like {feelslike}</h2>
+            <h1 className='temperature'>{Math.round(current.main.temp)}{marker}</h1>
+            <h2 className='feelslike'>feels like {Math.round(current.main.feels_like)}{marker}</h2>
           </div>
           <div className='panel-right'>
-            <p className='dew-point'>dew point: {dewpoint}</p>
-            <p className='humidity'>humidity: {humidity}</p>
-            <p className='pressure'>pressure: {pressure}</p>
-            <p className='wind'>wind: {windspeed} {direction}</p>
+            <p className='dew-point'>dew point: {giveDewPoint(current.main.temp, current.main.humidity, units)}{marker}</p>
+            <p className='humidity'>humidity: {current.main.humidity}%</p>
+            <p className='pressure'>pressure: {current.main.pressure} mb</p>
+            <p className='wind'>wind: {Math.round(current.wind.speed)}{speed} {giveDirection(current.wind.deg)}</p>
           </div>
         </div>
         <div className='panel-bottom'>
