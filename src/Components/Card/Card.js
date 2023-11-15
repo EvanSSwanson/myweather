@@ -6,6 +6,18 @@ import downArrow from '../../resources/arrow_down.png'
 import upArrow from '../../resources/arrow_up.png'
 
 const Card = ({current, forecast, units, marker, speed}) => {
+  
+
+  const dealForecasts = () => {
+    const yeah = [0, 1, 2, 3, 4, 5]
+    return yeah.map(fc => 
+        <div className='forecast-card'>
+          <div className='card-header'>
+            <p className='forecast-time'>{giveDate(forecast.list[fc].dt, current.timezone)}</p>
+          </div>
+      </div>
+    )
+  }
 
   function Collapsible() {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
@@ -16,8 +28,7 @@ return (
         </div>
         <div {...getCollapseProps()}>
             <div className="collapse-content">
-                Now you can see the hidden content. <br/><br/>
-                Click again to hide...
+              {dealForecasts()}
             </div>
         </div>
     </div>

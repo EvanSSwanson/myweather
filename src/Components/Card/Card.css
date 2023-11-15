@@ -98,13 +98,15 @@
 }
 
 .collapsible .collapse-content {
-    background-color: #33363e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    background-color: #202227;
     width: 95vw;
-    height: 106vw;
-    border-style: solid;
-    border-radius: 2vw;
-    border-width: .25vw;
-    border-color: #ec6e4c;
+    height: 120vw;
     z-index: top;
     position:relative;
 }
@@ -133,4 +135,32 @@
 
 .up-arrow {
     margin-right: 3.45vw;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 33.33%;
+}
+
+.forecast-card {
+    border-radius: 2vw;
+    height: 38vw;
+    width: 46.5vw;
+    background-color: #33363e;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    background-color: #272a36;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+    height: 7vw;
+    width: 100%;
+}
+
+.forecast-time {
+    padding-left: 2vw;
 }
