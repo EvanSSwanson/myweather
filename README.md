@@ -6,6 +6,8 @@ This app leans on OpenWeatherMap.org's open-source weather API. It was a very in
 
 Besides being useful to me personally, this project's main purpose is to be a stepping stone, touching on all the areas I learned in Turing (CSS, React/XML, displaying fetched API data, clean user experiences, deployment...).
 
+You can visit the live site [here](https://tempestweather.netlify.app/).
+
 ![Brief features gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3hzMTNyejZpZWtqejlrZDJkeDRsbm9nNDV6MGltMTZwczBseW5hMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eORFpUhVdCSgdyUqxa/giphy.gif)
 
 ## Technologies
