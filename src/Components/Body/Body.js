@@ -52,7 +52,7 @@ const Body = ({units}) => {
         <div>
 
         </div>
-        {info.filter(obj => obj.pos < 10).map((datum) => {
+        {info.filter(obj => obj.pos < 12).map((datum) => {
             return (
                 <Card 
                 current={datum.weather[units]}
