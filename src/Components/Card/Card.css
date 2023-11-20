@@ -6,18 +6,14 @@
     border-radius: 2vw;
     height: 40vw;
     width: 95vw;
-    font-family: 'Autour One';
+    font-family: 'Nunito';
     color: #efeade;
     font-size: 1.5vw;
 }
 
-.Card p {
-    font-size: 2.7vw;
-    margin: 1vw;
-}
-
 .panel-top {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: #272a36;
     border-top-left-radius: 2vw;
@@ -25,16 +21,31 @@
     height: 12vw;
 }
 
+.panel-top-name, .panel-top-sun {
+    display: flex;
+    align-items: center;
+    margin-right: 2vw;
+}
+
 .city-name {
     margin-left: 2vw;
     font-family: 'Young Serif';
-    font-size: 6vw;
+    font-size: 8vw;
 }
 
 .region-name {
-    margin-left: 4vw;
-    margin-top: 2.1vw;
+    margin-top: 4vw;
+    margin-left: 3vw;
+    font-size: 3vw;
     font-family: 'Young Serif';
+}
+
+.sun-icon {
+    margin-right: 1vw;
+}
+
+.sunrise, .sunset {
+    font-size: 2vw;
 }
 
 .main-panel-container {
@@ -78,9 +89,14 @@
 }
 
 .temperature {
-    font-size: 9vw;
+    font-size: 10vw;
     margin-top: 3vw;
-    margin-bottom: 3.5vw;
+    margin-bottom: 1.15vw;
+}
+
+.dew-point, .humidity, .pressure, .wind {
+    font-size: 2.7vw;
+    margin: .75vw;
 }
 
 .panel-bottom {
@@ -106,7 +122,7 @@
     padding-bottom: 1vw;
     background-color: #202227;
     width: 95vw;
-    height: 120vw;
+    height: 130vw;
     z-index: top;
     position:relative;
 }
@@ -146,7 +162,7 @@
 
 .forecast-card {
     border-radius: 2vw;
-    height: 38vw;
+    height: 41vw;
     width: 46.5vw;
     background-color: #33363e;
 }
@@ -161,6 +177,74 @@
     width: 100%;
 }
 
-.forecast-time {
+.card-time {
     padding-left: 2vw;
+    font-size: 3.5vw;
+}
+
+.card-main {
+    display: flex;
+    height: 18vw;
+}
+
+.card-main-left, .card-main-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+}
+
+.card-icon-container {
+    height: 12vw;
+}
+
+.card-icon {
+    height: 20vw;
+    width: 20vw;
+    margin-top: -3vw;
+}
+
+.card-description {
+    font-size: 2.25vw;
+    margin-top: 2.75vw;
+}
+
+.card-temperature {
+    font-size: 7vw;
+    margin-top: 3vw;
+}
+
+.card-feelslike {
+    font-size: 2.25vw;
+    margin-top: -3.55vw;
+}
+
+.card-bottom {
+    display: flex;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-top-style: solid;
+    border-top-width: .5vw;
+    border-top-color:#272a36;
+    height: 15vw;
+    margin-top: 3vw;
+}
+
+.card-bottom-third {
+    height: 100%;
+    width: 33.33%;
+}
+
+.card-info-title {
+    font-size: 1.9vw;
+}
+
+.card-info-content {
+    font-size: 3vw;
+}
+
+#card-info-wind {
+    font-size: 2.5vw;
 }
