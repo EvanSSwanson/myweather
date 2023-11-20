@@ -1,7 +1,8 @@
 
 @media screen and (min-width: 55.1em) {
     .Body {
-        margin-top: 9vw;
+        margin-top: 8vw;
+        padding-left: 1.75vw;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;

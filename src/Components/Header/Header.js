@@ -1,6 +1,5 @@
 import './Header.css'
-import React, { useState, useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React from 'react'
 import githubImage from '../../resources/github_image_1.png'
 
 const Header = ({setUnits}) => {

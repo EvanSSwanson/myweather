@@ -1,9 +1,7 @@
 import './Body.css'
 import React, { useState, useEffect } from 'react'
-import { Route, Routes, Link } from 'react-router-dom'
 import Card from '../Card/Card'
 import cities from '../../resources/cities'
-import { giveDate, giveDewPoint, giveDirection } from '../../resources/funcs'
 
 const Body = ({units}) => {
 
@@ -62,7 +60,6 @@ const Body = ({units}) => {
                 units={units}
                 marker={marker}
                 speed={speed}
-                // future={datum.forecast[units].list[0].main.humidity}
                 />
             );
         })}
