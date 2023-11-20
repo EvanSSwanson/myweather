@@ -1,4 +1,5 @@
-import './Card.css';
+import './Card.css'
+import './Card-desktop.css'
 import React from 'react'
 import { useCollapse } from 'react-collapsed';
 import { giveDate, giveDewPoint, giveDirection, dealForecasts } from '../../resources/funcs'

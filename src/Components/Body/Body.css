@@ -2,6 +2,9 @@
 @media screen and (min-width: 55.1em) {
     .Body {
         margin-top: 9vw;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 

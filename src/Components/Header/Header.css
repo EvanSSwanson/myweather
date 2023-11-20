@@ -9,6 +9,7 @@
     color: #efeade;
     cursor: default;
     width: 100vw;
+    z-index: 80;
 }
 
 .header-left {
@@ -80,8 +81,8 @@
     }
 
     #fahrenheit-button {
-        margin-left: 5vw;
-        margin-right: 3vw;
+        margin-left: 3vw;
+        margin-right: 4vw;
     }
   }
   
